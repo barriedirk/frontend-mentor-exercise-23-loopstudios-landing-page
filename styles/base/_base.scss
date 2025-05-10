@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --clr-blue-500: #{$variable-clr-blue-500};
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $variable-ff;
+  font-size: $variable-default-font-size;
+  font-weight: $variable-fw-light;
+  background-color: $variable-clr-blue-950;
+  color: $variable-clr-blue-500;
+  line-height: 1.44444444;
+  gap: 2rem;
+}
