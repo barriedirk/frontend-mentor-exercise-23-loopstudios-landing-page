@@ -1,59 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+    <meta name="author" content="Barrie Freyre" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Careers
-  Events
-  Products
-  Support
+    <meta name="linkedin" content="https://www.linkedin.com/in/barriefreyre/" />
+    <meta name="github" content="https://github.com/barriedirk" />
+    <meta
+      name="frontendmentor"
+      content="https://www.frontendmentor.io/profile/barriedirk"
+    />
 
-  Immersive experiences that deliver
+    <link rel="me" href="https://www.linkedin.com/in/barriefreyre/" />
+    <link rel="me" href="https://github.com/barriedirk" />
+    <link rel="me" href="https://www.frontendmentor.io/profile/barriedirk" />
 
-  The leader in interactive VR
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Barrie Freyre",
+        "url": "",
+        "sameAs": [
+          "https://www.linkedin.com/in/barriefreyre/",
+          "https://github.com/barriedirk",
+          "https://www.frontendmentor.io/profile/barriedirk"
+        ]
+      }
+    </script>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Our creations
+    <title>Frontend Mentor | Loopstudios landing page</title>
 
-  See all
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+    <link rel="stylesheet" href="./main.css" />
 
-  About
-  Careers
-  Events
-  Products
-  Support
+    <script type="module" src="./main.js"></script>
 
-  © 2021 Loopstudios. All rights reserved.
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+      <div class="content relative h-100">
+        <nav
+          class="header__nav d-flex justify-between items-center"
+          role="navigation"
+          aria-label="Main"
+        >
+          <a href="#" class="header__logo">
+            <img src="./images/logo.svg" alt="Loopstudios Logo" />
+            <span class="sr-only">Loopstudios</span>
+          </a>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="header__nav-wrapper">
+            <button
+              id="header__nav-button-toggle"
+              class="header__nav-button"
+              aria-label="Open/Close Navigation"
+              aria-expanded="false"
+              aria-controls="header__nav-options"
+            >
+              <span class="sr-only">Open menu</span>
+            </button>
+            <ul id="header__nav-options" class="header__nav-options">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+        </nav>
+        <h1 id="header__title" class="header__title">
+          Immersive experiences that deliver
+        </h1>
+      </div>
+    </header>
+
+    <main class="hero">
+      <h2>The leader in interactive VR</h2>
+
+      <p class="header__description">
+        Founded in 2011, Loopstudios has been producing world-class virtual
+        reality projects for some of the best companies around the globe. Our
+        award-winning creations have transformed businesses through digital
+        experiences that bind to their brand.
+      </p>
+    </main>
+
+    <h2>Our creations</h2>
+
+    See all Deep earth Night arcade Soccer team VR The grid From up above VR
+    Pocket borealis The curiosity Make it fisheye
+
+    <footer>
+      <nav>
+        <li>About</li>
+        <li>Careers</li>
+        <li>Events</li>
+        <li>Products</li>
+        <li>Support</li>
+      </nav>
+
+      © 2021 Loopstudios. All rights reserved.
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+        target="_blank"
+        aria-label="View my Frontend Mentor solutions"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/barriefreyre/"
+        target="_blank"
+        aria-label="Visit Barrie Freyre on LinkedIn"
+        >Barrie Freyre</a
+      >.
+    </div>
+  </body>
 </html>
