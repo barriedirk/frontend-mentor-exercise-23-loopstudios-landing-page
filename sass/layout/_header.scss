@@ -1,11 +1,17 @@
+@use "../abstracts/functions" as *;
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+@use "../base/utilities" as *;
+
+@use "../components/link" as *;
+@use "../components/logo" as *;
+
 .header {
   position: relative;
-  height: 65rem;
+  height: rem(650);
   width: 100%;
-  padding: 4rem 1.8rem;
+  padding: rem(40) rem(18);
   color: $clr-white;
   transition: 0.4s;
 
@@ -14,23 +20,21 @@
   @include bck-cover;
 
   &__title {
-    font-size: 4rem;
+    font-size: rem(40);
     line-height: 0.95;
     text-transform: uppercase;
     font-weight: $fw-light;
     border: 1px solid $clr-white;
     padding: 2.1rem;
-    width: calc(100% - 3.6rem);
+    width: calc(100% - #{rem(36)});
     width: 100%;
-    max-width: 65rem;
+    max-width: rem(650);
     @include absCenterY;
     z-index: 1;
   }
 
   &__logo {
-    display: inline-block;
-    width: 14.4rem;
-    height: 2.4rem;
+    @extend %logo-image;
     z-index: 10;
   }
 
@@ -39,52 +43,32 @@
     z-index: 10;
     border: none;
     background-color: transparent;
-    width: 2.4rem;
-    height: 1.8rem;
+    width: rem(24);
+    height: rem(18);
     background-image: url("./images/icon-hamburger.svg");
     @include bck-contain;
   }
 
   &__nav-options {
-    @include flex-column;
+    @include flexColumnCenter;
     align-items: flex-start;
-    gap: 2.4rem;
+    gap: rem(24);
 
     display: none;
-    font-size: 2.4rem;
+    font-size: rem(24);
     line-height: 1.04166666667;
     z-index: 10;
     position: relative;
     text-transform: uppercase;
 
     & a {
-      position: relative;
-      color: inherit;
-      text-decoration: none;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background-color: currentColor;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover::before,
-      &:focus::before {
-        transform: scaleX(1);
-      }
+      @extend %link-underline-hover;
     }
   }
 
   &__nav-wrapper::before {
     opacity: 0;
-    transform: translateY(-1rem);
+    transform: translateY(rem(-10));
     transition: opacity 0.3s ease, transform 1s ease;
   }
 
@@ -108,8 +92,8 @@
     }
 
     .is-open &__nav-button {
-      width: 2rem;
-      height: 2rem;
+      width: rem(20);
+      height: rem(20);
       background-image: url("./images/icon-close.svg");
     }
 
@@ -129,8 +113,8 @@
     }
 
     &__nav-options {
-      @include flex-row;
-      font-size: 1.5rem;
+      @include flexRowCenter;
+      font-size: rem(15);
       line-height: 1.6666666667;
       align-items: center;
       gap: 2.4rem;
@@ -139,12 +123,12 @@
     }
 
     &__title {
-      font-size: 7.2rem;
+      font-size: rem(72);
       line-height: 0.9722222222;
     }
 
     &__nav-options a::before {
-      bottom: -1rem;
+      bottom: rem(-10);
     }
   }
 }

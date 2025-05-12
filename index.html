@@ -50,16 +50,6 @@
     <link rel="stylesheet" href="./main.css" />
 
     <script type="module" src="./main.js"></script>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -116,32 +106,81 @@
     See all Deep earth Night arcade Soccer team VR The grid From up above VR
     Pocket borealis The curiosity Make it fisheye
 
-    <footer>
-      <nav>
-        <li>About</li>
-        <li>Careers</li>
-        <li>Events</li>
-        <li>Products</li>
-        <li>Support</li>
-      </nav>
+    <footer class="footer">
+      <div class="content relative h-100">
+        <div class="footer__top">
+          <a href="/" class="footer__logo" aria-label="Loopstudios homepage">
+            <img src="./images/logo.svg" alt="Loopstudios" />
+          </a>
 
-      © 2021 Loopstudios. All rights reserved.
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="#">About</a></li>
+              <li class="footer__nav-item"><a href="#">Careers</a></li>
+              <li class="footer__nav-item"><a href="#">Events</a></li>
+              <li class="footer__nav-item"><a href="#">Products</a></li>
+              <li class="footer__nav-item"><a href="#">Support</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__social-networks">
+            <a href="#">
+              <img
+                class="footer__social-networks--icon social-network-icon"
+                src="./images/icon-facebook.svg"
+                alt="Facebook Icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="footer__social-networks--icon social-network-icon"
+                src="./images/icon-twitter.svg"
+                alt="Twitter Icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="footer__social-networks--icon social-network-icon"
+                src="./images/icon-pinterest.svg"
+                alt="Pinterest Icon"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="footer__social-networks--icon social-network-icon"
+                src="./images/icon-instagram.svg"
+                alt="Instagram Icon"
+              />
+            </a>
+          </div>
+
+          <p class="footer__copyright">
+            &copy; 2021 Loopstudios. All rights reserved.
+          </p>
+
+          <p class="footer__attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+              target="_blank"
+              rel="noopener"
+              aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+            >
+              Frontend Mentor</a
+            >. Coded by
+            <a
+              href="https://www.linkedin.com/in/barriefreyre/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit Barrie Freyre's LinkedIn profile"
+            >
+              Barrie Freyre</a
+            >.
+          </p>
+        </div>
+      </div>
     </footer>
-
-    <div class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io/profile/barriedirk/solutions"
-        target="_blank"
-        aria-label="View my Frontend Mentor solutions"
-        >Frontend Mentor</a
-      >. Coded by
-      <a
-        href="https://www.linkedin.com/in/barriefreyre/"
-        target="_blank"
-        aria-label="Visit Barrie Freyre on LinkedIn"
-        >Barrie Freyre</a
-      >.
-    </div>
   </body>
 </html>

@@ -1,9 +1,25 @@
+@use "../base//utilities" as *;
+
 @mixin clearfix {
   &::after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin absCenter {
@@ -101,6 +117,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
     }
   } @else if $breakpoint == xl {
     @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: 768px) {
       @content;
     }
   }
