@@ -113,7 +113,7 @@
     }
 
     &__nav-options {
-      @include flexRowCenter;
+      flex-direction: row;
       font-size: rem(15);
       line-height: 1.6666666667;
       align-items: center;

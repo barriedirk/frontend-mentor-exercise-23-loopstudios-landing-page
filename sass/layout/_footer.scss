@@ -59,7 +59,7 @@
 
   @include respondMinWidth(phone) {
     & > div {
-      @include flexRowCenter;
+      flex-direction: row;
       justify-content: space-between;
       gap: rem(10);
     }

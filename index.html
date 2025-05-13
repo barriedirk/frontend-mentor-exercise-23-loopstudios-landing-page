@@ -54,7 +54,7 @@
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
-      <div class="content relative h-100">
+      <div class="content relative h-100 w-100">
         <nav
           class="header__nav d-flex justify-between items-center"
           role="navigation"
@@ -91,23 +91,217 @@
     </header>
 
     <main class="hero">
-      <h2>The leader in interactive VR</h2>
+      <div class="hero__wrapper content relative h-100 w-100">
+        <picture class="hero__picture">
+          <source
+            srcset="./images/desktop/image-interactive.jpg"
+            media="(min-width: 600px)"
+          />
+          <img
+            src="./images/mobile/image-interactive.jpg"
+            alt="Man using a VR lens"
+            class="hero__image"
+          />
+        </picture>
 
-      <p class="header__description">
-        Founded in 2011, Loopstudios has been producing world-class virtual
-        reality projects for some of the best companies around the globe. Our
-        award-winning creations have transformed businesses through digital
-        experiences that bind to their brand.
-      </p>
+        <div class="hero__intro">
+          <h2 class="hero__headline">The leader in interactive VR</h2>
+
+          <p class="hero__description">
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+
+        <section class="hero__gallery" aria-labelledby="our-creations">
+          <h3 id="our-creations" class="hero__section-title">Our Creations</h3>
+
+          <div class="hero__gallery--list">
+            <a class="hero__gallery-item" href="#" aria-labelledby="deep-earth">
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-deep-earth.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-deep-earth.jpg"
+                  alt="Image of Earth"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="deep-earth" class="hero__gallery-title"
+                >DEEP EARTH</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="night-arcade"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-night-arcade.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-night-arcade.jpg"
+                  alt="Night Arcade"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="night-arcade" class="hero__gallery-title"
+                >NIGHT ARCADE</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="soccer-team-vr"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-soccer-team.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-soccer-team.jpg"
+                  alt="Soccer Team VR"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="soccer-team-vr" class="hero__gallery-title"
+                >Soccer Team VR</span
+              >
+            </a>
+
+            <a class="hero__gallery-item" href="#" aria-labelledby="the-grid">
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-grid.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-grid.jpg"
+                  alt="The Grid"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span
+                id="the-grid"
+                class="hero__gallery-title hero__gallery-title--break"
+                >The Grid</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="from-up-above-vr"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-from-above.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-from-above.jpg"
+                  alt="From Up Above VR"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="from-up-above-vr" class="hero__gallery-title"
+                >From Up Above VR</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="pocket-borealis"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-pocket-borealis.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-pocket-borealis.jpg"
+                  alt="Pocket Borealis"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="pocket-borealis" class="hero__gallery-title"
+                >Pocket Borealis</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="the-curiosity"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-curiosity.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-curiosity.jpg"
+                  alt="The Curiosity"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="the-curiosity" class="hero__gallery-title"
+                >The Curiosity</span
+              >
+            </a>
+
+            <a
+              class="hero__gallery-item"
+              href="#"
+              aria-labelledby="make-it-fisheye"
+            >
+              <picture class="hero__gallery-picture">
+                <source
+                  srcset="./images/desktop/image-fisheye.jpg"
+                  media="(min-width: 600px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/mobile/image-fisheye.jpg"
+                  alt="Make it fisheye"
+                  class="hero__gallery-image"
+                />
+              </picture>
+              <span id="make-it-fisheye" class="hero__gallery-title"
+                >Make it fisheye</span
+              >
+            </a>
+          </div>
+
+          <a
+            href="#"
+            class="hero__see-all-link"
+            aria-label="See others solutions"
+            >See All</a
+          >
+        </section>
+      </div>
     </main>
 
-    <h2>Our creations</h2>
-
-    See all Deep earth Night arcade Soccer team VR The grid From up above VR
-    Pocket borealis The curiosity Make it fisheye
-
     <footer class="footer">
-      <div class="content relative h-100">
+      <div class="content relative h-100 w-100">
         <div class="footer__top">
           <a href="/" class="footer__logo" aria-label="Loopstudios homepage">
             <img src="./images/logo.svg" alt="Loopstudios" />
