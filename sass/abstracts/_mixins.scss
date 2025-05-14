@@ -8,20 +8,6 @@
   }
 }
 
-@mixin flexRowCenter {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flexColumnCenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @mixin absCenter {
   position: absolute;
   top: 50%;
@@ -37,23 +23,6 @@
 }
 
 // MEDIA QUERY MANAGER
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-*/
 @mixin respondMaxWidth($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -122,14 +91,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 }
 
-@mixin respond($breakpoint) {
-  @if $breakpoint == md {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-}
-
 // How to use
 // .nav {
 //   display: flex;
@@ -138,6 +99,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 //     flex-direction: column;
 //   }
 // }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
 
 @mixin button($bg-color, $text-color) {
   background-color: $bg-color;
@@ -157,6 +126,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
 // .btn-primary {
 //   @include button($primary-color, #fff);
 // }
+
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @mixin flex-center {
   display: flex;

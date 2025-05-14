@@ -21,6 +21,7 @@
     @include flexColumnCenter;
     gap: rem(32);
     margin-bottom: rem(60);
+    background-color: $clr-white;
   }
 
   &__headline,
@@ -83,6 +84,7 @@
 
     &-item {
       position: relative;
+      width: fit-content;
 
       &:hover {
         img {
@@ -97,6 +99,7 @@
 
   &__see-all-link {
     display: inline-block;
+    width: rem(170);
     padding: rem(13) rem(43);
     font-size: rem(14);
     font-weight: $fw-normal;
@@ -117,15 +120,25 @@
       grid-area: hero__picture;
     }
 
-    &__intro {
-      grid-area: hero__intro;
-      width: rem(541);
-      height: rem(317);
-      justify-content: flex-end;
-      margin-bottom: 0;
-      padding: rem(90) rem(90) 0;
+    &__image {
+      aspect-ratio: 731 / 500;
+      max-width: rem(731);
     }
 
+    &__intro {
+      grid-area: hero__intro;
+      position: absolute;
+      aspect-ratio: 541 / 317;
+      width: rem(400);
+      height: auto;
+      justify-content: flex-end;
+      margin-bottom: 0;
+      padding: rem(20) 0 0 rem(20);
+      right: 0;
+      top: rem(34);
+    }
+
+    &__section-title,
     &__headline {
       font-size: rem(48);
       text-align: left;
@@ -135,22 +148,20 @@
       text-align: left;
     }
 
-    &__image {
-      aspect-ratio: 731 / 500;
-      max-width: rem(731);
-    }
-
     &__section-title {
       grid-area: hero__section_title;
     }
 
     &__see-all-link {
       grid-area: hero__see_all_link;
+      justify-self: end;
     }
 
     &__gallery {
+      margin-top: rem(96);
       display: grid;
       grid-area: hero__gallery;
+      justify-content: normal;
 
       grid-template-areas:
         "hero__section_title hero__see_all_link"
@@ -158,23 +169,47 @@
 
       &--list {
         grid-area: hero__gallery__list;
-
-        gap: rem(25);
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(rem(256), 1fr));
+        gap: rem(32);
       }
 
       &-image {
         width: 100%;
         aspect-ratio: 256 / 450;
+        max-width: rem(256);
       }
     }
 
     &__wrapper {
-      display: grid;
-      grid-template-areas:
-        "hero__picture hero__intro"
-        "hero__gallery hero__gallery";
+      position: relative;
+      display: block;
+      justify-content: baseline;
+    }
+  }
+
+  @include respondMinWidth(tab-port) {
+    &__intro {
+      width: rem(450);
+      justify-content: flex-end;
+      margin-bottom: 0;
+      padding: rem(50) 0 0 rem(50);
+      top: rem(200);
+    }
+  }
+
+  @include respondMinWidth(tab-land) {
+    &__intro {
+      width: rem(541);
+      padding: rem(90) 0 0 rem(90);
+      transform: none;
+      right: 0;
+      left: rem(575);
+      top: rem(183);
+    }
+
+    &__gallery {
+      margin-top: rem(180);
     }
   }
 }
